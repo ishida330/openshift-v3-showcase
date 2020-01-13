@@ -65,7 +65,7 @@ oc edit scc restricted
 3. Import template into your OpenShift environment
 --------------------------------------------------
 ```
-wget https://raw.githubusercontent.com/sebastianfaulhaber/openshift-v3-showcase/master/websphere-liberty/websphere-liberty-template.json
+wget https://raw.githubusercontent.com/ishida330/openshift-v3-showcase/master/websphere-liberty/websphere-liberty-template.json
 oc create -f websphere-liberty-template.json -n openshift
 ```
 
