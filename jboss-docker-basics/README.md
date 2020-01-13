@@ -82,7 +82,7 @@ docker stop <container-id>
 Create a new project and select "Red Hat JBoss EAP 7.0 (no https)" as your S2I template. In the following screen specify the following settings:
 
 ```
-Git Repository URL: https://github.com/sebastianfaulhaber/openshift-v3-showcase.git
+Git Repository URL: https://github.com/ishida330/openshift-v3-showcase.git
 Git Reference: <leave empty>
 Context Dir: jboss-docker-basics/03-jboss-eap-on-openshift
 ```
@@ -100,7 +100,7 @@ This example uses the official JBoss EAP Docker image (built and managed by Red 
 oc import-image my-jboss-eap-7/jboss-eap71-openshift --from=registry.access.redhat.com/jboss-eap-7/eap71-openshift --confirm
 
 # Create application
-oc new-app https://github.com/sebastianfaulhaber/openshift-v3-showcase.git --context-dir=jboss-docker-basics/04-jboss-eap-from-container-catalog-on-openshift --strategy=docker --name=jboss-eap -l type=appserver
+oc new-app https://github.com/ishida330/openshift-v3-showcase.git --context-dir=jboss-docker-basics/04-jboss-eap-from-container-catalog-on-openshift --strategy=docker --name=jboss-eap -l type=appserver
 ``` 
 
 Examine the OpenShift build log and wait for the according Pod come up. Then create a route for the generated service by clicking on "Create Route" in the project overview. Accept all the defaults.
@@ -116,7 +116,7 @@ This example uses the official Apache httpd Docker image (built and managed by R
 oc import-image my-rhscl/httpd-24-rhel7 --from=registry.access.redhat.com/rhscl/httpd-24-rhel7 --confirm
 
 # Create application
-oc new-app https://github.com/sebastianfaulhaber/openshift-v3-showcase.git --context-dir=jboss-docker-basics/05-httpd-from-container-catalog-on-openshift --strategy=docker --name=httpd -l type=webserver
+oc new-app https://github.com/ishida330/openshift-v3-showcase.git --context-dir=jboss-docker-basics/05-httpd-from-container-catalog-on-openshift --strategy=docker --name=httpd -l type=webserver
 ``` 
 
 Examine the OpenShift build log and wait for the according Pod come up. Then create a route for the generated service by clicking on "Create Route" in the project overview. Accept all the defaults.

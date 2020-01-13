@@ -13,7 +13,7 @@ This project demonstrates how to use IBM WebSphere Liberty (a lightweight Java E
 * No prior experience with Docker needed
 * Automated build & deploy life cycle
 
-The source code can be found here: https://github.com/sebastianfaulhaber/openshift-v3-showcase/tree/master/websphere-liberty
+The source code can be found here: https://github.com/ishida330/openshift-v3-showcase/tree/master/websphere-liberty
 
 Screenshots
 ------------------

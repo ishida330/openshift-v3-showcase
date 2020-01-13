@@ -24,7 +24,7 @@ items:
     source:
       contextDir: jboss-docker-basics/04-jboss-eap-from-container-catalog-on-openshift
       git:
-        uri: https://github.com/sebastianfaulhaber/openshift-v3-showcase.git
+        uri: https://github.com/ishida330/openshift-v3-showcase.git
       type: Git
     strategy:
       dockerStrategy:

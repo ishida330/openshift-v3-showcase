@@ -25,7 +25,7 @@
             "value": ""
         },
         {
-            "description": "URL to the source code repository hosting your WebSphere Liberty application (e.g. https://github.com/sebastianfaulhaber/openshift-v3-showcase.git)",
+            "description": "URL to the source code repository hosting your WebSphere Liberty application (e.g. https://github.com/ishida330/openshift-v3-showcase.git)",
             "name": "SOURCE_REPOSITORY_URL",
             "value": "https://github.com/ishida330/openshift-v3-showcase.git",
             "required": true

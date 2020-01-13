@@ -20,9 +20,9 @@
       - name: create project
         shell: 'oc new-project {{ ocp_project_name }} --display-name="{{ ocp_project_display_name }}" --description="{{ ocp_project_description }}"'
       - name: create wordpress template from github
-        shell: 'oc create -f https://raw.githubusercontent.com/sebastianfaulhaber/wordpress-quickstart/master/templates/classic-standalone.json'      
+        shell: 'oc create -f https://raw.githubusercontent.com/ishida330/wordpress-quickstart/master/templates/classic-standalone.json'      
       - name: create wordpress instance from template
-        shell: 'oc new-app --template=wordpress-classic-standalone -p APPLICATION_NAME="{{ ocp_app_name }}" -p QUICKSTART_REPOSITORY_URL="https://github.com/sebastianfaulhaber/wordpress-quickstart/"'
+        shell: 'oc new-app --template=wordpress-classic-standalone -p APPLICATION_NAME="{{ ocp_app_name }}" -p QUICKSTART_REPOSITORY_URL="https://github.com/ishida330/wordpress-quickstart/"'
       - name: create external route
         shell: 'oc create route edge {{ ocp_app_name }}-ext --service={{ ocp_app_name }} --hostname={{ external_hostname }} --insecure-policy=Allow'
       - name: get temporary hostname from internal route
@@ -43,7 +43,7 @@
         shell: 'oc get pod -l deploymentconfig={{ ocp_app_name }} -o=jsonpath="{.items[0].metadata.name}"'
         register: ocp_wp_pod_id  
       - name: download wp-cli into pod
-        shell: 'oc rsh {{ ocp_wp_pod_id.stdout }} wget https://raw.githubusercontent.com/sebastianfaulhaber/openshift-v3-showcase/master/openshift-anwender/res/wp-cli.phar'
+        shell: 'oc rsh {{ ocp_wp_pod_id.stdout }} wget https://raw.githubusercontent.com/ishida330/openshift-v3-showcase/master/openshift-anwender/res/wp-cli.phar'
       - name: wp-cli install wordpress plugins
         shell: 'oc rsh {{ ocp_wp_pod_id.stdout }} php wp-cli.phar plugin install {{ item }} --activate'
         with_items:
